@@ -3,14 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "baseUrl": ".",
-  "paths": {
-    "@/*": [
-      "./*"
-    ]
-  },
   "exports": {
     "./*": "./src/*.tsx",
-    "./styles.css": "./dist/styles.css"
+    "./styles.css": "./dist/styles.css",
+    "./components/*": "./src/components/*.tsx"
   },
   "scripts": {
     "build": "tailwindcss -i ./src/styles.css -o ./dist/styles.css",

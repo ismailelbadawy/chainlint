@@ -1,5 +1,5 @@
 import Image, { type ImageProps } from "next/image";
-import { Button } from "@repo/ui/button";
+import { Button } from "@repo/ui/components/ui/button";
 import styles from "./page.module.css";
 
 type Props = Omit<ImageProps, "src"> & {
@@ -26,7 +26,7 @@ export default function Home() {
         </div>
         <div className="grid">
           <p>Now let's dive into shadcn/ui</p>
-          <Button appName="AI Contract Analysis" className="btn">Click me</Button>
+          <Button>Click me</Button>
         </div>
     </div>
   );
