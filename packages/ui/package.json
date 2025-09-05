@@ -3,10 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "baseUrl": ".",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
   "exports": {
-    "./*": "./src/*.tsx",
+    ".": "./src/index.ts",
+    "./*": "./src/*",
     "./styles.css": "./dist/styles.css",
-    "./components/*": "./src/components/*.tsx"
+    "./components/ui/button": "./src/components/ui/button.tsx",
+    "./lib/utils": "./src/lib/utils.ts"
   },
   "scripts": {
     "build": "tailwindcss -i ./src/styles.css -o ./dist/styles.css",

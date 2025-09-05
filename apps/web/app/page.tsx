@@ -1,22 +1,4 @@
-import Image, { type ImageProps } from "next/image";
-import { Button } from "@repo/ui/components/ui/button";
-import styles from "./page.module.css";
-
-type Props = Omit<ImageProps, "src"> & {
-  srcLight: string;
-  srcDark: string;
-};
-
-const ThemeImage = (props: Props) => {
-  const { srcLight, srcDark, ...rest } = props;
-
-  return (
-    <>
-      <Image {...rest} src={srcLight} className="imgLight" />
-      <Image {...rest} src={srcDark} className="imgDark" />
-    </>
-  );
-};
+import { Button } from "@repo/ui";
 
 export default function Home() {
   return (
@@ -25,7 +7,7 @@ export default function Home() {
           <p>Ismail is Learning Tailwind</p>
         </div>
         <div className="grid">
-          <p>Now let's dive into shadcn/ui</p>
+          <p>Now let&apos;s dive into shadcn/ui</p>
           <Button>Click me</Button>
         </div>
     </div>
